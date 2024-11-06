@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -11,8 +11,9 @@ using static VintageApp.Data.Entities.BaseEntity;
 namespace VintageApp.Data.Entities
 {
     public class ProductEntity : BaseEntity
-    {       
-               
+    {
+
+        public int Id { get; set; }
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
@@ -29,9 +30,11 @@ namespace VintageApp.Data.Entities
         public override void Configure(EntityTypeBuilder<ProductEntity> builder)
         {
             builder.Property(x => x.ProductName)
-                 .IsRequired();
-            
-            
+                 .IsRequired();            
+            builder.HasKey(x => x.Id);
+              
+
+
             base.Configure(builder);
         }
     }
