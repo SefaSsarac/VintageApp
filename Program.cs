@@ -106,6 +106,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseMiddleware<MaintenanceMiddleware>();
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 
 app.UseHttpsRedirection();
