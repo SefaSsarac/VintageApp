@@ -59,10 +59,15 @@ The application will be accessible at http address by default.
 
 ## Technologies Used
 ASP.NET Core Web API
+
 Entity Framework Core (Code First)
+
 ASP.NET Core Identity & JWT Authentication
+
 Data Protection API
+
 Action Filters and Middleware
+
 Dependency Injection (DI)
 
 ## Contributing
